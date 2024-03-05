@@ -28,13 +28,6 @@ async function getWeatherData(cityValue) {
 
     const data = await response.json();
     console.log(data);
-    // console.log(data.weather[0]);
-    // console.log(data.clouds.all);
-    // console.log(data.cod);
-    // console.log(data.coord.lon);
-    // console.log(data.main.feels_like);
-    // console.log(data.weather[0].description);
-    // console.log(data.wind.gust);
 
     const temperature = Math.round(data.main.temp);
 
@@ -43,7 +36,7 @@ async function getWeatherData(cityValue) {
     const icon = data.weather[0].icon;
     const details = [
       `Feels like: ${Math.round(data.main.feels_like)} °F`,
-      `Huidity: ${data.main.humidity}%`,
+      `Huidity: ${data.main.humidity} %`,
       `Wind speed: ${data.wind.speed} m/s`,
     ];
 
