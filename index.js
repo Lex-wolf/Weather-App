@@ -36,7 +36,7 @@ async function getWeatherData(cityValue) {
     const icon = data.weather[0].icon;
     const details = [
       `Feels like: ${Math.round(data.main.feels_like)} °F`,
-      `Huidity: ${data.main.humidity} %`,
+      `Humidity: ${data.main.humidity} %`,
       `Wind speed: ${data.wind.speed} m/s`,
     ];
 
